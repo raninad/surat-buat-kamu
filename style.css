@@ -1,0 +1,102 @@
+/* CSS */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffe0e9;
+  font-family: cambria;
+}
+
+.card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  max-width: 600px;
+}
+
+.teks {
+	color: black;
+	text-align: center;
+	font-size : 15px
+}
+.teks p {
+	color: #FF6060 ;
+	text-align : center;
+	size : 20;
+}
+
+.teks h5{
+	color : #9CAFAA;
+}
+
+/* Sembunyiin checkbox aslinya */
+input[type="checkbox"] {
+  display: none;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #ff6b9d;
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff4081;
+  transform: scale(1.05);
+}
+
+/* Pesan disembunyiin dulu */
+.pesan {
+   max-height: 0;
+  overflow-y: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+  margin-top: 0;
+}
+
+input[type="checkbox"]:checked ~ .pesan {
+  max-height: 300px;
+  overflow-y: auto;
+  opacity: 1;
+  margin-top: 20px;
+  padding: 15px;
+  background: #fff0f5;
+  border-radius: 12px;
+  border: 2px dashed #ff6b9d;
+}
+
+/* Pas checkbox dicentang = tombol diklik, pesan muncul */
+input[type="checkbox"]:checked ~ .pesan {
+  max-height: 400px;
+  opacity: 1;
+  margin-top: 20px;
+  padding: 15px;
+  background: #fff0f5;
+  border-radius: 12px;
+  border: 2px dashed #ff6b9d;
+}
+
+input[type="checkbox"]:checked + .btn {
+  background: #FFE3E3;
+}
+
+.foto {
+	margin-top : auto;
+	margin-bottom : auto;
+	width : 10 px;
+	height: 10 px;
+}
+
+.meme img{
+	height : 10 px;
+}
